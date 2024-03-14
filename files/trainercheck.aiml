@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- Pattern to trigger for cybersecurity-related questions -->
+  <category>
+    <pattern>cybersecurity *</pattern>
+    <template>
+      <!-- Make an HTTP request to the server-side script to retrieve cybersecurity answers -->
+      <get>
+        <!-- Replace "your_server_endpoint_here" with the actual URL of your server-side script -->
+        <url>https://www.ibm.com/topics/cybersecurity?query=<star/></url>
+      </get>
+    </template>
+  </category>
+  
+  <!-- Default response for other queries -->
+  <category>
+    <pattern>*</pattern>
+    <template>I have no answer for that.</template>
+  </category>
+</aiml>
